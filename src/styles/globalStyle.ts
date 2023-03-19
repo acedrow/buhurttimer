@@ -2,9 +2,16 @@ import { createGlobalStyle } from 'styled-components'
 import theme from './theme'
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: 'Manuscript Gothisch';
+  font-style: normal;
+  font-weight: 200;
+  src: url('https://buhurttimer.com/manuscript-gothisch.ttf') format('truetype');
+}
   html {
     background-color: ${theme.backgroundColor} ;
-    font-family: ${theme.fontFamily};
+    //font-family: ${theme.fontFamily};
+    font-family: 'Manuscript Gothisch' ;
     color: ${theme.textColor};
 
   }
