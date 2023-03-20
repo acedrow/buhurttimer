@@ -1,11 +1,13 @@
 import styled from 'styled-components'
-import CountdownClock from './CountdownClock'
-import ScoreCounter from './ScoreCounter'
+import CountdownClock from '../timer/CountdownClock'
+import ScoreCounter from '../timer/ScoreCounter'
+import Background from './Background'
 
-const TimerMain = () => {   
+const MainPage = () => {
   return (
     <div style={{ textAlign: 'center' }}>
-      {/* <h2>Buhurt Chapter-Match Timekeeper</h2> */}
+      {/* <h2>Buhurt Chapter-Match Timekeeper</h2> */} 
+      <Background />
       <OuterContainer>
         <ScoreCounter title="Wyverns" />
         <ClocksContainer>
@@ -39,4 +41,4 @@ const OuterContainer = styled.div`
   flex-wrap: wrap;
 `
 
-export default TimerMain
+export default MainPage

@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
   src: url('https://buhurttimer.com/manuscript-gothisch.ttf') format('truetype');
 }
   html {
-    background-color: ${theme.backgroundColor} ;
     //font-family: ${theme.fontFamily};
     font-family: 'Manuscript Gothisch' ;
     color: ${theme.textColor};
@@ -20,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.textColor};
     font-family: ${theme.fontFamily};
   }
+
   .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
