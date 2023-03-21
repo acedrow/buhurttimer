@@ -11,15 +11,17 @@ const ScoreCounter = ({ title }: ScoreCounterProps) => {
     <OuterContainer>
       {title}
       <ScoreContainer>
-        {score > 0 && (
-          <CrementButtonContainer
-            onClick={() => setScore((prevScore) => prevScore - 1)}
-          >
-            -
-          </CrementButtonContainer>
-        )}
-        <Score> {score}</Score>
         <CrementButtonContainer
+          className={'noselect'}
+          $invisible={score <= 0}
+          onClick={() => setScore((prevScore) => prevScore - 1)}
+        >
+          ~
+        </CrementButtonContainer>
+
+        <Score className={'noselect'}> {score}</Score>
+        <CrementButtonContainer
+          className={'noselect'}
           onClick={() => setScore((prevScore) => prevScore + 1)}
         >
           +
@@ -33,14 +35,9 @@ const Score = styled.div`
   min-width: 60px; ;
 `
 
-const CrementButtonContainer = styled.span`
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+const CrementButtonContainer = styled.span<{ $invisible?: boolean }>`
   cursor: pointer;
+  visibility: ${(p) => (p.$invisible ? 'hidden' : 'visible')};
 `
 
 const ScoreContainer = styled.div`
@@ -49,6 +46,7 @@ const ScoreContainer = styled.div`
 `
 
 const OuterContainer = styled.div`
+  font-family: 'Manuscript Gothisch';
   margin: 30px 0;
   font-size: 32px;
   display: flex;

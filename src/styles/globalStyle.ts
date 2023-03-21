@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 }
   html {
     //font-family: ${theme.fontFamily};
-    font-family: 'Manuscript Gothisch' ;
+    font-family: 'Source Sans Pro,sans-serif' ;
     color: ${theme.textColor};
 
   }
