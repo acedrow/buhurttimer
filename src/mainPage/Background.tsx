@@ -6,7 +6,6 @@ const CHECKS_PER_SIDE = 6
 const Background = () => {
   const ref = useRef<HTMLDivElement>(null)
   const [checkWidth, setCheckWidth] = useState<number>(0)
-  console.log('checkwidth', checkWidth)
   useEffect(() => {
     setCheckWidth(
       Math.floor((ref?.current?.clientWidth || 0) / CHECKS_PER_SIDE )

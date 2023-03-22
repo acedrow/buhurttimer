@@ -6,7 +6,6 @@ import Background from './Background'
 const MainPage = () => {
   return (
     <div style={{ textAlign: 'center' }}>
-      {/* <h2>Buhurt Chapter-Match Timekeeper</h2> */} 
       <Background />
       <OuterContainer>
         <ScoreCounter title="Wyverns" />
